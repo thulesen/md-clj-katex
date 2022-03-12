@@ -1,0 +1,16 @@
+;; shadow-cljs configuration
+{:source-paths ["src/"]
+
+ :dependencies [[markdown-clj "1.10.6"]
+                [reagent "1.1.0"]
+                [hiccup "1.0.5"]]
+
+ :dev-http {8080 {:root    "public/"
+                  :handler md-clj-katex.app/handler}}
+
+ :builds {:app    {:target     :browser
+                   :output-dir "public/"
+                   :modules    {:main {:init-fn md-clj-katex.app/render}}}
+          :script {:target    :node-script
+                   :main      md-clj-katex.script/main
+                   :output-to "out/script.js"}}}

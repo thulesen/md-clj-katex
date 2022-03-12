@@ -1,0 +1,15 @@
+{
+  "name": "website",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "shadow-cljs": "2.15.6"
+  },
+  "dependencies": {
+    "katex": "^0.13.16",
+    "markdown-clj": "^1.10.3",
+    "minimist": "^1.2.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
