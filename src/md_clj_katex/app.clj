@@ -44,7 +44,8 @@
   [{:keys [uri http-roots http-config] :as req}]
   (let [level  (-> uri
                    (str/split #"/")
-                   count)
+                   count
+                   (- 2))
         prefix (str/join (repeat level "../"))]
     {:status  200
      :headers {"content-type" "text/html; charset=utf-8"}
