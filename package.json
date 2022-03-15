@@ -2,6 +2,9 @@
   "name": "website",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+	  "force-compile": "npx shadow-cljs --config-merge '{:build-options {:cache-level :jars}}' compile app"
+  },
   "devDependencies": {
     "shadow-cljs": "2.15.6"
   },
